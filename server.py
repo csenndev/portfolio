@@ -11,11 +11,6 @@ def my_home():
 def html_page(page_name):
     return render_template(page_name)
 
-def write_to_file(data):
-    with open('../database.txt', mode='a') as database:
-        entry_string = str(f'\n{data['email']}, {data['subject']}, {data['message']}')
-        database.write(entry_string)
-
 def write_to_csv(data):
     with open('../database.csv', mode='a', newline='') as database2:
         email = data['email']
